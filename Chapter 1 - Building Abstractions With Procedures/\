@@ -1,0 +1,14 @@
+#lang sicp
+
+(define (inc x) (+ x 1))
+(define (dec x) (- x 1))
+
+
+(define (pascal-triangle row column) 
+  (if (or (= column row) (= column 1)) 
+    1 
+    (+ (pascal-triangle (dec column) (dec row) ) (pascal-triangle (column) (dec row)))))
+
+(pascal-triangle 0 0)
+(pascal-triangle 1 1)
+
